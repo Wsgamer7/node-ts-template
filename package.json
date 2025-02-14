@@ -1,0 +1,22 @@
+{
+  "name": "node-ts-template",
+  "version": "1.0.0",
+  "description": "Node.js TypeScript Template with Prettier and TSC",
+  "license": "MIT",
+  
+  "scripts": {
+    "build": "rm -rf ./dist && tsc --project tsconfig.build.json && resolve-tspaths -p tsconfig.build.json -s ./src -o ./dist",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "22.0.0",
+    "@types/node": "22.13.4",
+    "prettier": "3.5.1",
+    "resolve-tspaths": "0.8.23",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2"
+  }
+}
