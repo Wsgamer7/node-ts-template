@@ -4,6 +4,10 @@
     "paths": {
       "@/*": ["./src/*"]
     },
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["esnext"],
     "resolveJsonModule": true,
     /* Linting */
     "noUnusedLocals": true,
