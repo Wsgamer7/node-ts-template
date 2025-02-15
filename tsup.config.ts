@@ -1,4 +1,3 @@
-import { fixAliasPlugin } from 'esbuild-fix-imports-plugin'
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
@@ -9,5 +8,17 @@ export default defineConfig({
   clean: true,
   format: 'esm',
   bundle: false,
-  plugins: [fixAliasPlugin()],
+  plugins: [
+    {
+      name: 'alias-plugin',
+      renderChunk(_, { code }) {
+        if (this.format === 'esm') {
+          const regex = /from ["']@\/(.+)["']/g
+          return {
+            code: code.replace(regex, 'from "./$1.js"'),
+          }
+        }
+      },
+    },
+  ],
 })
