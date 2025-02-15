@@ -5,19 +5,16 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "rm -rf ./dist && tsc --project tsconfig.build.json && resolve-tspaths -p tsconfig.build.json -s ./src -o ./dist",
+    "build": "tsup",
     "dev": "tsx src/index.ts",
     "start": "node dist/index.js"
   },
-  "dependencies": {
-  },
   "devDependencies": {
-    "@tsconfig/node22": "22.0.0",
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "@types/node": "22.13.4",
     "prettier": "3.5.1",
-    "resolve-tspaths": "0.8.23",
+    "tsup": "^8.3.6",
     "tsx": "4.19.2",
-    "typescript": "5.7.3",
-    "@trivago/prettier-plugin-sort-imports": "^5.2.2"
+    "typescript": "5.7.3"
   }
 }
