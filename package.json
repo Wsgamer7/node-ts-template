@@ -16,6 +16,10 @@
     "prettier": "3.5.1",
     "tsup": "^8.3.6",
     "tsx": "4.19.2",
-    "typescript": "5.7.3"
+    "typescript": "5.7.3",
+    "esbuild-fix-imports-plugin": "^1.0.14"
+  },
+  "dependencies": {
+    
   }
 }
