@@ -1,13 +1,11 @@
-import { fixImportsPlugin } from 'esbuild-fix-imports-plugin'
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  entry: ['src/**/*.ts'], // keep all files structure
-  //entry: ['src/index.ts'], // single file
-  // sourcemap: true,
+  entry: ['src/index.ts'],
+  sourcemap: true,
   outDir: 'dist',
   clean: true,
   format: 'esm',
-  bundle: false,
-  esbuildPlugins: [fixImportsPlugin()],
+  bundle: true,
+  // minify: true,
 })

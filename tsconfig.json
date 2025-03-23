@@ -9,5 +9,5 @@
     "lib": ["esnext"],
     "resolveJsonModule": true
   },
-  "include": ["src", "tests"]
+  "include": ["src"]
 }
